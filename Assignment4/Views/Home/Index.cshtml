@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Top 5 Provo Restaurants";
+}
+@model IEnumerable<string>
+
+
+<body>
+    <div class="text-center">
+        <!--Bootstrap Styling-->
+        <h4 class="bg-dark text-white-50">This site shows the Top 5 restaurants in Provo</h4>
+    </div>
+    <!--Bootstrap Styling-->
+    <div class="list-group">
+        <ul>
+            @foreach (string i in Model)
+            {
+                <li class="list-group-item">@i</li>
+            }
+        </ul>
+    </div>
+    <!--Bootstrap Styling-->
+    <div class="text-center">
+        <img class="rounded" src="~/img/provofood.jpg" />
+    </div>
+    <br />
+    <br />
+</body>
+

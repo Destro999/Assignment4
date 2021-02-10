@@ -1,0 +1,54 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Add New Restaurant";
+}
+@model Assignment4.Models.Restaurant2
+
+<h1>@ViewData["Title"]</h1>
+
+
+<!--Form to submit for Restaurant Suggestions-->
+<form class="form" asp-action="NewRestaurant" method="post">
+    <fieldset>
+        <legend>
+            New Restaurant
+        </legend>
+        <div class="form">
+            <label asp-for="username"> username: </label>
+            <br />
+            <input class="username" asp-for="username" id="username" />
+            <br />
+            <label asp-for="Rank"> Rank: </label>
+            <br />
+            <input class="rank" asp-for="Rank" id="rank" />
+            <br />
+            <label asp-for="RestaurantName"> RestaurantName: </label>
+            <br />
+            <input class="RestaurantName" asp-for="RestaurantName" id="RestaurantName" />
+            <br />
+            <label asp-for="FavoriteDish"> FavoriteDish: </label>
+            <br />
+            <input class="FavoriteDish" asp-for="FavoriteDish" id="FavoriteDish" />
+            <br />
+            <label asp-for="Address"> Address: </label>
+            <br />
+            <input class="Address" asp-for="Address" id="Address" />
+            <br />
+            <label asp-for="RestaurantPhone"> RestaurantPhone: </label>
+            <br />
+            <!--Input for Phone only allows certain pattern of numbers, anythin else is not accepted-->
+            <input type="tel" class="RestaurantPhone" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" asp-for="RestaurantPhone" id="RestaurantPhone" />
+            <br />
+            <label asp-for="LinkToWebsite"> LinkToWebsite: </label>
+            <br />
+            <input class="LinkToWebsite" asp-for="LinkToWebsite" id="LinkToWebsite" />
+            <br />
+            <div>
+                <button type="submit" id="calculate">Submit New Restaurant</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+

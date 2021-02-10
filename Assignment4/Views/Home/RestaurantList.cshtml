@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "The Suggestion List";
+}
+@model IEnumerable<Assignment4.Models.Restaurant2>
+<!--Suggestion list from current users that details Name -->
+<div>
+    <h4>Current Suggestions</h4>
+</div>
+
+<table>
+    <thead>
+        <tr><th>UserName</th><th>Rank</th><th>RestaurantName</th><th>FavoriteDish</th><th>Address</th><th>RestaurantPhone</th><th>LinkToWebsite</th></tr>
+    </thead>
+    <tbody>
+        @foreach (Assignment4.Models.Restaurant2 x in Model)
+        {
+            <tr>
+                <td>@x.username</td>
+                <td>@x.Rank</td>
+                <td>@x.RestaurantName</td>
+                <td>@x.FavoriteDish</td>
+                <td>@x.Address</td>
+                <td>@x.RestaurantPhone</td>
+                <td>@x.LinkToWebsite</td>
+            </tr>
+        }
+    </tbody>
+</table>
